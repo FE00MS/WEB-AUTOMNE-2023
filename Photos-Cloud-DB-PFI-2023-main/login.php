@@ -53,6 +53,7 @@ if (isset($_POST['submit'])) {
         $_SESSION['avatar'] = $avatar;
         $_SESSION["photoSortType"] = "date";
         $_SESSION["kw"] = "";
+        $_SESSION["select"] = "";
         redirect('photosList.php');
     }
 }
