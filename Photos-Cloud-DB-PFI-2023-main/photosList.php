@@ -62,11 +62,13 @@ switch ($sortType) {
             $photos = "";
             if($ID!=0){
                 $photos = PhotosTable()->selectWhere("OwnerId = $ID");
+                $_SESSION["select"] = UsersTable()->get($ID)->Name;
+                $list = $photos;
             }
             else{
                 $photos = PhotosTable()->get();
+                $_SESSION["select"] =" Tous les usagers";
             }
-            $list = $photos;
         }
         break;
     case "owner":
